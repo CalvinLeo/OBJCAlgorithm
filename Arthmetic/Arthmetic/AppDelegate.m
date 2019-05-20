@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Arthmetic.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSInteger index = [Arthmetic binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
+    NSLog(@"index 在数组中的位置是：%ld", (long)index);
+    
+    NSMutableArray *bubbleArray = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
+    //    [Arthmetic bubbleAscendingSort:bubbleArray];
+    [Arthmetic bubbleDescendingSort:bubbleArray];
+    NSLog(@"冒泡排序结果：%@", bubbleArray);
+    
     return YES;
 }
 
