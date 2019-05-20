@@ -19,13 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSInteger index = [Arthmetic binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
-    NSLog(@"index 在数组中的位置是：%ld", (long)index);
+//    NSInteger index = [Arthmetic binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
+//    NSLog(@"index 在数组中的位置是：%ld", (long)index);
+//
+    NSMutableArray *arrayM = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
+//    //    [Arthmetic bubbleAscendingSort:bubbleArray];
+//    [Arthmetic bubbleDescendingSort:arrayM];
+//    NSLog(@"冒泡排序结果：%@", arrayM);
     
-    NSMutableArray *bubbleArray = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
-    //    [Arthmetic bubbleAscendingSort:bubbleArray];
-    [Arthmetic bubbleDescendingSort:bubbleArray];
-    NSLog(@"冒泡排序结果：%@", bubbleArray);
+    [Arthmetic selectSort:arrayM];
+    NSLog(@"选择排序结果为：%@", arrayM);
     
     return YES;
 }

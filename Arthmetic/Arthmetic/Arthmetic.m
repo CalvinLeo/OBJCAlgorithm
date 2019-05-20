@@ -32,7 +32,10 @@
     return -1;
 }
 
-// 冒泡排序
+/**
+ * 冒泡升序
+ * 思路：两个两个比较，如果前一个比后一个大就交换l；第一趟的结果是遍历出最大的元素到末尾
+ */
 + (void)bubbleAscendingSort:(NSMutableArray<NSNumber *> *)array
 {
     if (array == nil || array.count == 1) {
@@ -52,6 +55,7 @@
     }
 }
 
+// 冒泡降序
 + (void)bubbleDescendingSort:(NSMutableArray<NSNumber *> *)array
 {
     if (array == nil || array.count == 1) {
@@ -67,6 +71,32 @@
                 array[j] = array[j+1];
                 array[j+1] = temp;
             }
+        }
+    }
+}
+
+/**
+ * 选择排序
+ * 思路：每一次都挑选出未排序中的最小值或者最大值与未排好序的最左位置或最右位置交换
+ */
++ (void)selectSort:(NSMutableArray<NSNumber *> *)array
+{
+    int i, j, min;
+    for (i = 0; i < array.count - 1; i++) {
+        min = i;
+        for (j = i+1; j < array.count; j++) {
+            NSInteger num = [[array objectAtIndex:j] integerValue];
+            NSInteger mix = [[array objectAtIndex:min] integerValue];
+            if (mix > num) {
+                min = j;
+            }
+        }
+        
+        if (min != i) {
+            NSNumber *temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+            NSLog(@"第%d趟排序结果为：%@", i+1, array);
         }
     }
 }

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSInteger)binarySortWithArray:(NSArray<NSNumber *> *)array value:(NSInteger)value;
 
 /*
- * 冒泡排序
+ * 冒泡升序排序
  * 时间复杂度 O(n²)
  */
 + (void)bubbleAscendingSort:(NSMutableArray<NSNumber *> *)array;
@@ -29,6 +29,12 @@ NS_ASSUME_NONNULL_BEGIN
  * 时间复杂度 O(n²)
  */
 + (void)bubbleDescendingSort:(NSMutableArray<NSNumber *> *)array;
+
+/*
+ * 选择排序
+ * 时间复杂度 O(n²)
+ */
++ (void)selectSort:(NSMutableArray<NSNumber *> *)array;
 
 @end
 
