@@ -27,8 +27,11 @@
 //    [Arthmetic bubbleDescendingSort:arrayM];
 //    NSLog(@"冒泡排序结果：%@", arrayM);
     
-    [Arthmetic selectSort:arrayM];
-    NSLog(@"选择排序结果为：%@", arrayM);
+//    [Arthmetic selectSort:arrayM];
+//    NSLog(@"选择排序结果为：%@", arrayM);
+    
+    [Arthmetic insertionSort:arrayM];
+    NSLog(@"插入排序结果：%@", arrayM);
     
     return YES;
 }
