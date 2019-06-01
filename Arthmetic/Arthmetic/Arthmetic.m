@@ -143,4 +143,40 @@
     }
 }
 
++ (void)quickSort:(NSMutableArray<NSNumber *> *)array low:(NSInteger)low high:(NSInteger)high
+{
+    if (array == nil || array.count < 2) {
+        return;
+    }
+    
+    if (low < high) {
+        NSInteger index = [Arthmetic getIndexWithQuickSort:array low:low high:high];
+        [Arthmetic quickSort:array low:0 high:index - 1];
+        [Arthmetic quickSort:array low:index + 1 high:high];
+    }
+}
+
++ (NSInteger)getIndexWithQuickSort:(NSMutableArray<NSNumber *> *)array low:(NSInteger)low high:(NSInteger
+                                                                                                )high
+{
+    NSInteger baseNum = [[array objectAtIndex:low] integerValue];
+    
+    while (low < high) {
+        while ([array[high] integerValue] > baseNum && low < high) {
+            high--;
+        }
+        array[low] = array[high];
+        
+        while ([array[low] integerValue] < baseNum && low < high) {
+            low++;
+        }
+        array[high] = array[low];
+    }
+    
+    // low 和 high值相等
+    array[low] = [NSNumber numberWithInteger:baseNum];
+    
+    return low;
+}
+
 @end

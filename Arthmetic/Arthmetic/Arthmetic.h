@@ -42,6 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)insertionSort:(NSMutableArray <NSNumber *> *)array;
 
+/**
+ * 快速排序
+ * 平均时间复杂度 O(logN)
+ */
++ (void)quickSort:(NSMutableArray <NSNumber *> *)array low:(NSInteger)low high:(NSInteger)high;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -30,8 +30,10 @@
 //    [Arthmetic selectSort:arrayM];
 //    NSLog(@"选择排序结果为：%@", arrayM);
     
-    [Arthmetic insertionSort:arrayM];
-    NSLog(@"插入排序结果：%@", arrayM);
+//    [Arthmetic insertionSort:arrayM];
+//    NSLog(@"插入排序结果：%@", arrayM);
+    [Arthmetic quickSort:arrayM low:0 high:arrayM.count - 1];
+    NSLog(@"快速排序结果：%@", arrayM);
     
     return YES;
 }
