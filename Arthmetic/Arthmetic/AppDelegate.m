@@ -23,17 +23,17 @@
 //    NSLog(@"index 在数组中的位置是：%ld", (long)index);
 //
     NSMutableArray *arrayM = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
-//    //    [SortTool bubbleAscendingSort:bubbleArray];
+    [SortTool bubbleAscendingSort:arrayM];
 //    [SortTool bubbleDescendingSort:arrayM];
-//    NSLog(@"冒泡排序结果：%@", arrayM);
+    NSLog(@"冒泡排序结果：%@", arrayM);
     
 //    [SortTool selectSort:arrayM];
 //    NSLog(@"选择排序结果为：%@", arrayM);
     
 //    [SortTool insertionSort:arrayM];
 //    NSLog(@"插入排序结果：%@", arrayM);
-    [SortTool quickSort:arrayM low:0 high:arrayM.count - 1];
-    NSLog(@"快速排序结果：%@", arrayM);
+//    [SortTool quickSort:arrayM low:0 high:arrayM.count - 1];
+//    NSLog(@"快速排序结果：%@", arrayM);
     
     return YES;
 }

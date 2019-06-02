@@ -42,14 +42,14 @@
         return;
     }
     
-    for (int i = 0; i < array.count-1; i++) {
-        for (int j = 0; j < array.count -1-i; j++) {
-            NSInteger next = [[array objectAtIndex:j+1] integerValue];
+    for (int i = 0; i < array.count; i++) {
+        for (int j = 1; j < array.count-i; j++) {
             NSInteger current = [[array objectAtIndex:j] integerValue];
-            if (current > next) {
+            NSInteger last = [[array objectAtIndex:j - 1] integerValue];
+            if (last > current) {
                 NSNumber *temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                array[j] = array[j-1];
+                array[j-1] = temp;
             }
         }
     }
@@ -62,14 +62,14 @@
         return;
     }
     
-    for (int i = 0; i < array.count - 1; i++) {
-        for (int j = 0; j < array.count - 1 - i; j++) {
+    for (int i = 0; i < array.count; i++) {
+        for (int j = 1; j < array.count - i; j++) {
             NSInteger current = [array[j] integerValue];
-            NSInteger next = [array[j+1] integerValue];
-            if (current < next) {
+            NSInteger last = [array[j-1] integerValue];
+            if (last < current) {
                 NSNumber *temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                array[j] = array[j-1];
+                array[j-1] = temp;
             }
         }
     }
