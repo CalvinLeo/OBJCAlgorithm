@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Arthmetic : NSObject
+@interface SortTool : NSObject
 
 /**
  * 二分查找法

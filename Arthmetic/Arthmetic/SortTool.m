@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Calvin. All rights reserved.
 //
 
-#import "Arthmetic.h"
+#import "SortTool.h"
 
-@implementation Arthmetic
+@implementation SortTool
 
 // 二分查找
 + (NSInteger)binarySortWithArray:(NSArray<NSNumber *> *)array value:(NSInteger)value
@@ -110,17 +110,6 @@
     if (array == nil || array.count < 2) {
         return;
     }
-//    for (int i = 1; i < array.count; i++) {
-//        for (int j = i - 1; j >= 0; j--) {
-//            NSInteger num = [array[j] integerValue];
-//            NSInteger nextNum = [array[j+1] integerValue];
-//            if (num > nextNum) {
-//                NSNumber *temp = array[j];
-//                array[j] = array[j+1];
-//                array[j+1] = temp;
-//            }
-//        }
-//    }
     
     for (int i = 1; i < array.count; i++)
     {
@@ -143,6 +132,11 @@
     }
 }
 
+/*
+ * 快速排序
+ * 思路：左右两个标记位分别对挑选出的参考数进行比较，然后再采用分制的处理方式对对每一次的排序结果在进行排序
+ * 直到不能再划分为止
+ */
 + (void)quickSort:(NSMutableArray<NSNumber *> *)array low:(NSInteger)low high:(NSInteger)high
 {
     if (array == nil || array.count < 2) {
@@ -150,9 +144,9 @@
     }
     
     if (low < high) {
-        NSInteger index = [Arthmetic getIndexWithQuickSort:array low:low high:high];
-        [Arthmetic quickSort:array low:0 high:index - 1];
-        [Arthmetic quickSort:array low:index + 1 high:high];
+        NSInteger index = [SortTool getIndexWithQuickSort:array low:low high:high];
+        [SortTool quickSort:array low:0 high:index - 1];
+        [SortTool quickSort:array low:index + 1 high:high];
     }
 }
 

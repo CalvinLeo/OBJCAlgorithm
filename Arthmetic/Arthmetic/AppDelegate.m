@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "Arthmetic.h"
+#import "SortTool.h"
 
 @interface AppDelegate ()
 
@@ -19,20 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    NSInteger index = [Arthmetic binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
+//    NSInteger index = [SortTool binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
 //    NSLog(@"index 在数组中的位置是：%ld", (long)index);
 //
     NSMutableArray *arrayM = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
-//    //    [Arthmetic bubbleAscendingSort:bubbleArray];
-//    [Arthmetic bubbleDescendingSort:arrayM];
+//    //    [SortTool bubbleAscendingSort:bubbleArray];
+//    [SortTool bubbleDescendingSort:arrayM];
 //    NSLog(@"冒泡排序结果：%@", arrayM);
     
-//    [Arthmetic selectSort:arrayM];
+//    [SortTool selectSort:arrayM];
 //    NSLog(@"选择排序结果为：%@", arrayM);
     
-//    [Arthmetic insertionSort:arrayM];
+//    [SortTool insertionSort:arrayM];
 //    NSLog(@"插入排序结果：%@", arrayM);
-    [Arthmetic quickSort:arrayM low:0 high:arrayM.count - 1];
+    [SortTool quickSort:arrayM low:0 high:arrayM.count - 1];
     NSLog(@"快速排序结果：%@", arrayM);
     
     return YES;

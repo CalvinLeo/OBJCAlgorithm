@@ -13,7 +13,7 @@
 		0E8811EC229309DD00AFCB53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8811EB229309DD00AFCB53 /* main.m */; };
 		0E8811F6229309DD00AFCB53 /* ArthmeticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8811F5229309DD00AFCB53 /* ArthmeticTests.m */; };
 		0E881201229309DD00AFCB53 /* ArthmeticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E881200229309DD00AFCB53 /* ArthmeticUITests.m */; };
-		0E88121022930A0600AFCB53 /* Arthmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* Arthmetic.m */; };
+		0E88121022930A0600AFCB53 /* SortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* SortTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,8 @@
 		0E8811FC229309DD00AFCB53 /* ArthmeticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArthmeticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E881200229309DD00AFCB53 /* ArthmeticUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArthmeticUITests.m; sourceTree = "<group>"; };
 		0E881202229309DD00AFCB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E88120E22930A0600AFCB53 /* Arthmetic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arthmetic.h; sourceTree = "<group>"; };
-		0E88120F22930A0600AFCB53 /* Arthmetic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arthmetic.m; sourceTree = "<group>"; };
+		0E88120E22930A0600AFCB53 /* SortTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortTool.h; sourceTree = "<group>"; };
+		0E88120F22930A0600AFCB53 /* SortTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			children = (
 				0E8811DC229309DB00AFCB53 /* AppDelegate.h */,
 				0E8811DD229309DB00AFCB53 /* AppDelegate.m */,
-				0E88120E22930A0600AFCB53 /* Arthmetic.h */,
-				0E88120F22930A0600AFCB53 /* Arthmetic.m */,
+				0E88120E22930A0600AFCB53 /* SortTool.h */,
+				0E88120F22930A0600AFCB53 /* SortTool.m */,
 				0E8811E5229309DD00AFCB53 /* Assets.xcassets */,
 				0E8811E7229309DD00AFCB53 /* LaunchScreen.storyboard */,
 				0E8811EA229309DD00AFCB53 /* Info.plist */,
@@ -260,7 +260,7 @@
 			files = (
 				0E8811EC229309DD00AFCB53 /* main.m in Sources */,
 				0E8811DE229309DB00AFCB53 /* AppDelegate.m in Sources */,
-				0E88121022930A0600AFCB53 /* Arthmetic.m in Sources */,
+				0E88121022930A0600AFCB53 /* SortTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
