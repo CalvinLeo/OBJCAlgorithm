@@ -173,4 +173,43 @@
     return low;
 }
 
+// 二叉树 先序遍历、中序遍历、后序遍历
+
+//typedef struct BiTNode{
+//    TElemType data;//数据
+//    struct BiTNode *lchild, *rchild;//左右孩子指针
+//} BiTNode, *BiTree;
+//
+///*二叉树的前序遍历递归算法*/
+//void PreOrderTraverse(BiTree T)
+//{
+//    if(T==NULL)
+//        return;
+//    printf("%c", T->data);  /*显示结点数据，可以更改为其他对结点操作*/
+//    PreOrderTraverse(T->lchild);    /*再先序遍历左子树*/
+//    PreOrderTraverse(T->rchild);    /*最后先序遍历右子树*/
+//}
+//
+//
+///*二叉树的中序遍历递归算法*/
+//void InOrderTraverse(BiTree T)
+//{
+//    if(T==NULL)
+//        return;
+//    InOrderTraverse(T->lchild); /*中序遍历左子树*/
+//    printf("%c", T->data);  /*显示结点数据，可以更改为其他对结点操作*/
+//    InOrderTraverse(T->rchild); /*最后中序遍历右子树*/
+//}
+//
+//
+///*二叉树的后序遍历递归算法*/
+//void PostOrderTraverse(BiTree T)
+//{
+//    if(T==NULL)
+//        return;
+//    PostOrderTraverse(T->lchild);   /*先后序遍历左子树*/
+//    PostOrderTraverse(T->rchild);   /*再后续遍历右子树*/
+//    printf("%c", T->data);  /*显示结点数据，可以更改为其他对结点操作*/
+//}
+
 @end
