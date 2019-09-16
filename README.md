@@ -5,6 +5,10 @@
 * 插入排序
 * 选择排序
 
+* OC自带的排序方式
+
+OC自带的排序方式有：NSComparator、NSDescriptor、Selector。
+
 #### 队列相关
 
 CLQueue:

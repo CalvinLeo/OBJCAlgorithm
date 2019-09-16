@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "SortTool.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -16,16 +17,35 @@
 
 @implementation AppDelegate
 
+- (void)initWithData {
+    Person *one = [Person modelWithName:@"Allen" birthDay:@"1992-01-01"];
+    Person *two = [Person modelWithName:@"Bob" birthDay:@"1991-01-30"];
+    Person *three = [Person modelWithName:@"Alice" birthDay:@"1992-03-23"];
+    Person *four = [Person modelWithName:@"Cindy" birthDay:@"1995-06-22"];
+    Person *five = [Person modelWithName:@"Davin" birthDay:@"1986-09-11"];
+    Person *six = [Person modelWithName:@"Calvin" birthDay:@"1990-07-31"];
+    Person *seven = [Person modelWithName:@"Serena" birthDay:@"1997-01-30"];
+    NSArray *persons = @[one, two, three, four, five, six, seven];
+    
+    NSSortDescriptor *nameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"birthDay" ascending:YES];
+    NSArray *newArr = [persons sortedArrayUsingDescriptors:@[nameDescriptor, dateDescriptor]];
+    
+    for (Person *p in newArr) {
+        NSLog(@"p:%@", p.birthDay);
+    }
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 //    NSInteger index = [SortTool binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
 //    NSLog(@"index 在数组中的位置是：%ld", (long)index);
 //
-    NSMutableArray *arrayM = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
-    [SortTool bubbleAscendingSort:arrayM];
+//    NSMutableArray *arrayM = [NSMutableArray arrayWithObjects:@6, @4, @1, @7, @9, @2, @3, nil];
+//    [SortTool bubbleAscendingSort:arrayM];
 //    [SortTool bubbleDescendingSort:arrayM];
-    NSLog(@"冒泡排序结果：%@", arrayM);
+//    NSLog(@"冒泡排序结果：%@", arrayM);
     
 //    [SortTool selectSort:arrayM];
 //    NSLog(@"选择排序结果为：%@", arrayM);
@@ -34,6 +54,8 @@
 //    NSLog(@"插入排序结果：%@", arrayM);
 //    [SortTool quickSort:arrayM low:0 high:arrayM.count - 1];
 //    NSLog(@"快速排序结果：%@", arrayM);
+    
+    [self initWithData];
     
     return YES;
 }

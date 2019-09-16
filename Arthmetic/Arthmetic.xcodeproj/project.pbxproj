@@ -15,6 +15,7 @@
 		0E881201229309DD00AFCB53 /* ArthmeticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E881200229309DD00AFCB53 /* ArthmeticUITests.m */; };
 		0E88121022930A0600AFCB53 /* SortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* SortTool.m */; };
 		C301EEBA232F29E100229AFC /* CLQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEB9232F29E100229AFC /* CLQueue.m */; };
+		C301EEBD232F5A0C00229AFC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEBC232F5A0C00229AFC /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		0E88120F22930A0600AFCB53 /* SortTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTool.m; sourceTree = "<group>"; };
 		C301EEB8232F29E100229AFC /* CLQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLQueue.h; sourceTree = "<group>"; };
 		C301EEB9232F29E100229AFC /* CLQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLQueue.m; sourceTree = "<group>"; };
+		C301EEBB232F5A0C00229AFC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C301EEBC232F5A0C00229AFC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				0E88120F22930A0600AFCB53 /* SortTool.m */,
 				C301EEB8232F29E100229AFC /* CLQueue.h */,
 				C301EEB9232F29E100229AFC /* CLQueue.m */,
+				C301EEBB232F5A0C00229AFC /* Person.h */,
+				C301EEBC232F5A0C00229AFC /* Person.m */,
 				0E8811E5229309DD00AFCB53 /* Assets.xcassets */,
 				0E8811E7229309DD00AFCB53 /* LaunchScreen.storyboard */,
 				0E8811EA229309DD00AFCB53 /* Info.plist */,
@@ -265,6 +270,7 @@
 			files = (
 				C301EEBA232F29E100229AFC /* CLQueue.m in Sources */,
 				0E8811EC229309DD00AFCB53 /* main.m in Sources */,
+				C301EEBD232F5A0C00229AFC /* Person.m in Sources */,
 				0E8811DE229309DB00AFCB53 /* AppDelegate.m in Sources */,
 				0E88121022930A0600AFCB53 /* SortTool.m in Sources */,
 			);
