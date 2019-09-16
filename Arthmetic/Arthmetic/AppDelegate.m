@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "BinaryTreeTool.h"
 #import "SortTool.h"    // 排序
 #import "CLQueue.h"     // 队列
 
@@ -95,7 +96,11 @@
     // 苹果自带排序
 //    [self descriptorHandle];
     
-    NSArray *array = [self levelTraverse];
+    BinaryTreeTool *biTool = [[BinaryTreeTool alloc] init];
+    BinaryTreeNode *rootNode = [biTool createBinaryTreeWithArray:@[@10, @50, @20, @22, @23, @33, @43, @53, @51]];
+    NSArray *array = [biTool levelTraverse:rootNode];
+    
+//    NSArray *array = [self levelTraverse];
     for (NSNumber *number in array) {
         NSLog(@"层次遍历：%@", number);
     }
