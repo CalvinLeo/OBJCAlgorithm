@@ -16,6 +16,7 @@
 		0E88121022930A0600AFCB53 /* SortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* SortTool.m */; };
 		C301EEBA232F29E100229AFC /* CLQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEB9232F29E100229AFC /* CLQueue.m */; };
 		C301EEBD232F5A0C00229AFC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEBC232F5A0C00229AFC /* Person.m */; };
+		C301EEC0232F7D2D00229AFC /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEBF232F7D2D00229AFC /* BinaryTreeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		C301EEB9232F29E100229AFC /* CLQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLQueue.m; sourceTree = "<group>"; };
 		C301EEBB232F5A0C00229AFC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C301EEBC232F5A0C00229AFC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C301EEBE232F7D2D00229AFC /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		C301EEBF232F7D2D00229AFC /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				0E8811E7229309DD00AFCB53 /* LaunchScreen.storyboard */,
 				0E8811EA229309DD00AFCB53 /* Info.plist */,
 				0E8811EB229309DD00AFCB53 /* main.m */,
+				C301EEBE232F7D2D00229AFC /* BinaryTreeNode.h */,
+				C301EEBF232F7D2D00229AFC /* BinaryTreeNode.m */,
 			);
 			path = Arthmetic;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				0E8811EC229309DD00AFCB53 /* main.m in Sources */,
 				C301EEBD232F5A0C00229AFC /* Person.m in Sources */,
 				0E8811DE229309DB00AFCB53 /* AppDelegate.m in Sources */,
+				C301EEC0232F7D2D00229AFC /* BinaryTreeNode.m in Sources */,
 				0E88121022930A0600AFCB53 /* SortTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CLQueue : NSObject
 
+@property (nonatomic, assign) BOOL isEmpty;
+
 - (instancetype)initWithCapacity:(NSInteger)capacity;
 
 - (void)queuePush:(id)object;

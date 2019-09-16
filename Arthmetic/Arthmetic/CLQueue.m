@@ -43,4 +43,11 @@
     return nil;
 }
 
+- (BOOL)isEmpty {
+    if (self.queueArray.count > 0) {
+        return NO;
+    }
+    return YES;
+}
+
 @end

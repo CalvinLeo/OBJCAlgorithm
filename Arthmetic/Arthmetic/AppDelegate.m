@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 
-#import "SortTool.h"
-#import "Person.h"
+#import "SortTool.h"    // 排序
+#import "CLQueue.h"     // 队列
+
+#import "Person.h"      // 模型
+#import "BinaryTreeNode.h" // 二叉树节点
 
 @interface AppDelegate ()
 
@@ -17,7 +20,7 @@
 
 @implementation AppDelegate
 
-- (void)initWithData {
+- (void)descriptorHandle {
     Person *one = [Person modelWithName:@"Allen" birthDay:@"1992-01-01"];
     Person *two = [Person modelWithName:@"Bob" birthDay:@"1991-01-30"];
     Person *three = [Person modelWithName:@"Alice" birthDay:@"1992-03-23"];
@@ -34,6 +37,40 @@
     for (Person *p in newArr) {
         NSLog(@"p:%@", p.birthDay);
     }
+}
+
+// 新建二叉树
+- (BinaryTreeNode *)createBinaryTreeData {
+    BinaryTreeNode *node6 = [BinaryTreeNode createNodeWithValue:38 leftNode:nil rightNode:nil];
+    BinaryTreeNode *node5 = [BinaryTreeNode createNodeWithValue:52 leftNode:node6 rightNode:nil];
+    BinaryTreeNode *node4 = [BinaryTreeNode createNodeWithValue:13 leftNode:nil rightNode:nil];
+    BinaryTreeNode *node3 = [BinaryTreeNode createNodeWithValue:24 leftNode:nil rightNode:nil];
+    BinaryTreeNode *node2 = [BinaryTreeNode createNodeWithValue:5 leftNode:node4 rightNode:node5];
+    BinaryTreeNode *node1 = [BinaryTreeNode createNodeWithValue:100 leftNode:node2 rightNode:node3];
+    return node1;
+}
+
+// 层次遍历
+- (NSArray *)levelTraverse {
+    CLQueue *queue = [[CLQueue alloc] initWithCapacity:10];
+    // 创建二叉树
+    BinaryTreeNode *treeNode = [self createBinaryTreeData];
+    // 将根节点加入二叉树
+    [queue queuePush:treeNode];
+    
+    // 二叉树节点插入队列，遍历左孩子，右孩子 如果不为空就加入队列
+    NSMutableArray *listArray = [NSMutableArray array];
+    while (!queue.isEmpty) {
+        BinaryTreeNode *currentNode = [queue queuePop];
+        [listArray addObject:[NSNumber numberWithInteger:currentNode.value]];
+        if (currentNode.leftNode) {
+            [queue queuePush:currentNode.leftNode];
+        }
+        if (currentNode.rightNode) {
+            [queue queuePush:currentNode.rightNode];
+        }
+    }
+    return [listArray copy];
 }
 
 
@@ -55,8 +92,13 @@
 //    [SortTool quickSort:arrayM low:0 high:arrayM.count - 1];
 //    NSLog(@"快速排序结果：%@", arrayM);
     
-    [self initWithData];
+    // 苹果自带排序
+//    [self descriptorHandle];
     
+    NSArray *array = [self levelTraverse];
+    for (NSNumber *number in array) {
+        NSLog(@"层次遍历：%@", number);
+    }
     return YES;
 }
 
