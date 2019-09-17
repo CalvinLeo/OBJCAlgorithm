@@ -30,6 +30,7 @@
     return node1;
 }
 
+// 根据数组创建二叉树
 - (BinaryTreeNode *)createBinaryTreeWithArray:(NSArray *)dataArray
 {
     if (dataArray.count == 0) {
@@ -60,6 +61,33 @@
         node.rightNode = [self insertNode:node.rightNode key:key];
     }
     return node;
+}
+
+// 先序遍历
+- (void)preOrderTraverse:(BinaryTreeNode *)binaryNode {
+    if (binaryNode != nil) {
+        NSLog(@"前序遍历节点值---%ld", binaryNode.value);
+        [self preOrderTraverse:binaryNode.leftNode];
+        [self preOrderTraverse:binaryNode.rightNode];
+    }
+}
+
+// 中序遍历
+- (void)inOrderTraverse:(BinaryTreeNode *)binaryNode {
+    if (binaryNode != nil) {
+        [self inOrderTraverse:binaryNode.leftNode];
+        NSLog(@"中序遍历节点值---%ld", binaryNode.value);
+        [self inOrderTraverse:binaryNode.rightNode];
+    }
+}
+
+// 后序遍历
+- (void)backOrderTraverse:(BinaryTreeNode *)binaryNode {
+    if (binaryNode != nil) {
+        [self backOrderTraverse:binaryNode.leftNode];
+        [self backOrderTraverse:binaryNode.rightNode];
+        NSLog(@"后序遍历节点值---%ld", binaryNode.value);
+    }
 }
 
 // 层次遍历

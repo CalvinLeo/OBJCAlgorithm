@@ -40,41 +40,6 @@
     }
 }
 
-// 新建二叉树
-- (BinaryTreeNode *)createBinaryTreeData {
-    BinaryTreeNode *node6 = [BinaryTreeNode createNodeWithValue:38 leftNode:nil rightNode:nil];
-    BinaryTreeNode *node5 = [BinaryTreeNode createNodeWithValue:52 leftNode:node6 rightNode:nil];
-    BinaryTreeNode *node4 = [BinaryTreeNode createNodeWithValue:13 leftNode:nil rightNode:nil];
-    BinaryTreeNode *node3 = [BinaryTreeNode createNodeWithValue:24 leftNode:nil rightNode:nil];
-    BinaryTreeNode *node2 = [BinaryTreeNode createNodeWithValue:5 leftNode:node4 rightNode:node5];
-    BinaryTreeNode *node1 = [BinaryTreeNode createNodeWithValue:100 leftNode:node2 rightNode:node3];
-    return node1;
-}
-
-// 层次遍历
-- (NSArray *)levelTraverse {
-    CLQueue *queue = [[CLQueue alloc] initWithCapacity:10];
-    // 创建二叉树
-    BinaryTreeNode *treeNode = [self createBinaryTreeData];
-    // 将根节点加入二叉树
-    [queue queuePush:treeNode];
-    
-    // 二叉树节点插入队列，遍历左孩子，右孩子 如果不为空就加入队列
-    NSMutableArray *listArray = [NSMutableArray array];
-    while (!queue.isEmpty) {
-        BinaryTreeNode *currentNode = [queue queuePop];
-        [listArray addObject:[NSNumber numberWithInteger:currentNode.value]];
-        if (currentNode.leftNode) {
-            [queue queuePush:currentNode.leftNode];
-        }
-        if (currentNode.rightNode) {
-            [queue queuePush:currentNode.rightNode];
-        }
-    }
-    return [listArray copy];
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 //    NSInteger index = [SortTool binarySortWithArray:@[@1, @3, @4, @5, @7, @9, @23] value:2];
@@ -98,12 +63,21 @@
     
     BinaryTreeTool *biTool = [[BinaryTreeTool alloc] init];
     BinaryTreeNode *rootNode = [biTool createBinaryTreeWithArray:@[@10, @50, @20, @22, @23, @33, @43, @53, @51]];
-    NSArray *array = [biTool levelTraverse:rootNode];
+    // 先序遍历
+    [biTool preOrderTraverse:rootNode];
     
-//    NSArray *array = [self levelTraverse];
-    for (NSNumber *number in array) {
-        NSLog(@"层次遍历：%@", number);
-    }
+    // 中序遍历
+    [biTool inOrderTraverse:rootNode];
+    
+    // 后序遍历
+    [biTool backOrderTraverse:rootNode];
+    
+    // 层次遍历
+//    NSArray *array = [biTool levelTraverse:rootNode];
+//    for (NSNumber *number in array) {
+//        NSLog(@"层次遍历：%@", number);
+//    }
+    
     return YES;
 }
 
