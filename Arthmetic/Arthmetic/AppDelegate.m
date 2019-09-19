@@ -65,12 +65,18 @@
     BinaryTreeNode *rootNode = [biTool createBinaryTreeWithArray:@[@10, @50, @20, @22, @23, @33, @43, @53, @51]];
     // 先序遍历
     [biTool preOrderTraverse:rootNode];
+    BinaryTreeNode *node = rootNode.rightNode.leftNode;
+    [biTool deleteNode:rootNode node:node];
     
-    // 中序遍历
-    [biTool inOrderTraverse:rootNode];
-    
-    // 后序遍历
-    [biTool backOrderTraverse:rootNode];
+    // 先序遍历
+    [biTool preOrderTraverse:rootNode];
+
+
+//    // 中序遍历
+//    [biTool inOrderTraverse:rootNode];
+//
+//    // 后序遍历
+//    [biTool backOrderTraverse:rootNode];
     
     // 层次遍历
 //    NSArray *array = [biTool levelTraverse:rootNode];

@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 二叉排序树插入排序
 - (BinaryTreeNode *)createBinaryTreeWithArray:(NSArray *)dataArray;
 
+// 删除
+- (void)deleteNode:(BinaryTreeNode *)tree node:(BinaryTreeNode *)node;
+
 // 先序遍历
 - (void)preOrderTraverse:(BinaryTreeNode *)binaryNode;
 

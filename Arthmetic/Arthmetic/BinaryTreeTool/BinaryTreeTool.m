@@ -63,6 +63,35 @@
     return node;
 }
 
+// 删除
+- (void)deleteNode:(BinaryTreeNode *)tree node:(BinaryTreeNode *)node {
+    if (node != nil) {
+        // 结点有左子树 找到左子树的右子树的叶子结点
+        if (node.leftNode != nil) {
+            BinaryTreeNode *childNode = node.leftNode;
+            BinaryTreeNode *lastNode = node.leftNode;
+            while (lastNode.rightNode != nil) {
+                childNode = lastNode;
+                lastNode = lastNode.rightNode;
+            }
+            node.value = lastNode.value;
+            if (childNode != lastNode) {
+                childNode.rightNode = lastNode.leftNode;
+            }
+            else {
+                node.leftNode = lastNode.leftNode;
+            }
+        }
+        else {
+            // 结点没有左子树，把右孩子直接替代原结点
+            node.value = node.rightNode.value;
+            node.rightNode = node.rightNode.rightNode;
+            node.leftNode = node.rightNode.leftNode;
+//            node = node.rightNode;
+        }
+    }
+}
+
 // 先序遍历
 - (void)preOrderTraverse:(BinaryTreeNode *)binaryNode {
     if (binaryNode != nil) {
