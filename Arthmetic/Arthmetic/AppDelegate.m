@@ -62,11 +62,14 @@
 //    [self descriptorHandle];
     
     BinaryTreeTool *biTool = [[BinaryTreeTool alloc] init];
-    BinaryTreeNode *rootNode = [biTool createBinaryTreeWithArray:@[@10, @50, @20, @22, @23, @33, @43, @53, @51]];
+    BinaryTreeNode *rootNode = [biTool createBinaryTreeWithArray:@[@10, @50, @20, @22, @28, @33, @43, @53, @51, @15, @18, @21, @25, @23, @24]];
     // 先序遍历
     [biTool preOrderTraverse:rootNode];
-    BinaryTreeNode *node = rootNode.rightNode.leftNode;
-    [biTool deleteNode:rootNode node:node];
+    BinaryTreeNode *node = rootNode.rightNode;
+    
+    [biTool deleteNode:node];
+    
+    NSLog(@"---------------------------------------");
     
     // 先序遍历
     [biTool preOrderTraverse:rootNode];
@@ -85,6 +88,13 @@
 //    }
     
     return YES;
+}
+
+- (void)deleteObject:(NSObject *)obj1 obj2:(NSObject *)obj2 {
+    NSObject *obj3 = [NSObject new];
+    obj1 = obj3;
+    obj2 = obj3;
+    NSLog(@"deleteObject-------obj1:%p----------obj2:%p", &obj1, &obj2);
 }
 
 

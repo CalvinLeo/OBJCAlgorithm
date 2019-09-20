@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BinaryTreeNode *)createBinaryTreeWithArray:(NSArray *)dataArray;
 
 // 删除
-- (void)deleteNode:(BinaryTreeNode *)tree node:(BinaryTreeNode *)node;
+- (void)deleteNode:(BinaryTreeNode *)node;
 
 // 先序遍历
 - (void)preOrderTraverse:(BinaryTreeNode *)binaryNode;

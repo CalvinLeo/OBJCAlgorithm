@@ -64,22 +64,22 @@
 }
 
 // 删除
-- (void)deleteNode:(BinaryTreeNode *)tree node:(BinaryTreeNode *)node {
+- (void)deleteNode:(BinaryTreeNode *)node {
     if (node != nil) {
         // 结点有左子树 找到左子树的右子树的叶子结点
         if (node.leftNode != nil) {
             BinaryTreeNode *childNode = node.leftNode;
-            BinaryTreeNode *lastNode = node.leftNode;
-            while (lastNode.rightNode != nil) {
-                childNode = lastNode;
-                lastNode = lastNode.rightNode;
+            BinaryTreeNode *lastRightNode = node.leftNode;
+            while (lastRightNode.rightNode != nil) {
+                childNode = lastRightNode;
+                lastRightNode = lastRightNode.rightNode;
             }
-            node.value = lastNode.value;
-            if (childNode != lastNode) {
-                childNode.rightNode = lastNode.leftNode;
+            node.value = lastRightNode.value;
+            if (childNode != lastRightNode) {
+                childNode.rightNode = lastRightNode.leftNode;
             }
             else {
-                node.leftNode = lastNode.leftNode;
+                node.leftNode = lastRightNode.leftNode;
             }
         }
         else {
@@ -87,7 +87,6 @@
             node.value = node.rightNode.value;
             node.rightNode = node.rightNode.rightNode;
             node.leftNode = node.rightNode.leftNode;
-//            node = node.rightNode;
         }
     }
 }
