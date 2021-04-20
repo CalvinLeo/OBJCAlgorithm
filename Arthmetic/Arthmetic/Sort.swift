@@ -10,6 +10,7 @@ import UIKit
 
 public class Sort: NSObject {
     @objc func log() {
-        print("hello");
+        print("hello world");
+        print("hello world 1")
     }
 }
