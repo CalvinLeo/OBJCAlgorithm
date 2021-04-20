@@ -15,6 +15,8 @@
 #import "Person.h"      // 模型
 #import "BinaryTreeNode.h" // 二叉树节点
 
+#import "Arthmetic-Swift.h"
+
 @interface AppDelegate ()
 
 @end
@@ -71,8 +73,10 @@
     
     NSLog(@"---------------------------------------");
     
+    Sort *sort = [[Sort alloc] init];
+    [sort log];
     // 先序遍历
-    [biTool preOrderTraverse:rootNode];
+//    [biTool preOrderTraverse:rootNode];
 
 
 //    // 中序遍历

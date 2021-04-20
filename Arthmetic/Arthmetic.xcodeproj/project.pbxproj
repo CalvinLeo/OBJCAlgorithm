@@ -14,6 +14,7 @@
 		0E8811F6229309DD00AFCB53 /* ArthmeticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8811F5229309DD00AFCB53 /* ArthmeticTests.m */; };
 		0E881201229309DD00AFCB53 /* ArthmeticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E881200229309DD00AFCB53 /* ArthmeticUITests.m */; };
 		0E88121022930A0600AFCB53 /* SortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* SortTool.m */; };
+		3FB73101262E7228006514E8 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB73100262E7228006514E8 /* Sort.swift */; };
 		C301EEBA232F29E100229AFC /* CLQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEB9232F29E100229AFC /* CLQueue.m */; };
 		C301EEBD232F5A0C00229AFC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEBC232F5A0C00229AFC /* Person.m */; };
 		C301EEC6232FA9B100229AFC /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEC4232FA9B100229AFC /* BinaryTreeNode.m */; };
@@ -53,6 +54,8 @@
 		0E881202229309DD00AFCB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E88120E22930A0600AFCB53 /* SortTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortTool.h; sourceTree = "<group>"; };
 		0E88120F22930A0600AFCB53 /* SortTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTool.m; sourceTree = "<group>"; };
+		3FB730FF262E7227006514E8 /* Arthmetic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arthmetic-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FB73100262E7228006514E8 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		C301EEB8232F29E100229AFC /* CLQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLQueue.h; sourceTree = "<group>"; };
 		C301EEB9232F29E100229AFC /* CLQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLQueue.m; sourceTree = "<group>"; };
 		C301EEBB232F5A0C00229AFC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				0E8811E7229309DD00AFCB53 /* LaunchScreen.storyboard */,
 				0E8811EA229309DD00AFCB53 /* Info.plist */,
 				0E8811EB229309DD00AFCB53 /* main.m */,
+				3FB73100262E7228006514E8 /* Sort.swift */,
+				3FB730FF262E7227006514E8 /* Arthmetic-Bridging-Header.h */,
 			);
 			path = Arthmetic;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				TargetAttributes = {
 					0E8811D8229309DB00AFCB53 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1220;
 					};
 					0E8811F0229309DD00AFCB53 = {
 						CreatedOnToolsVersion = 10.1;
@@ -291,6 +297,7 @@
 				0E8811EC229309DD00AFCB53 /* main.m in Sources */,
 				C301EEBD232F5A0C00229AFC /* Person.m in Sources */,
 				0E8811DE229309DB00AFCB53 /* AppDelegate.m in Sources */,
+				3FB73101262E7228006514E8 /* Sort.swift in Sources */,
 				C301EEC6232FA9B100229AFC /* BinaryTreeNode.m in Sources */,
 				0E88121022930A0600AFCB53 /* SortTool.m in Sources */,
 			);
@@ -455,14 +462,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Arthmetic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.calvin.Arthmetic;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arthmetic/Arthmetic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -471,14 +484,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Arthmetic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.calvin.Arthmetic;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arthmetic/Arthmetic-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -486,6 +504,7 @@
 		0E881209229309DD00AFCB53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArthmeticTests/Info.plist;
@@ -504,6 +523,7 @@
 		0E88120A229309DD00AFCB53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArthmeticTests/Info.plist;
@@ -522,6 +542,7 @@
 		0E88120C229309DD00AFCB53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArthmeticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,6 +560,7 @@
 		0E88120D229309DD00AFCB53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArthmeticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
