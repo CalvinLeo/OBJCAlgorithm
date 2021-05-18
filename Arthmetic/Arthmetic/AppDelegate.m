@@ -74,11 +74,7 @@
     NSLog(@"---------------------------------------");
     
     Sort *sort = [[Sort alloc] init];
-    
-    NSArray *temp = @[@0, @1, @2, @1, @2, @1, @2, @1, @1, @2, @0, @0, @0];
-    NSMutableArray *arr = [NSMutableArray arrayWithArray:temp];
-    [sort quickSortWithArray:arr left:0 right:arr.count - 1 pivot:0];
-    NSLog(@"排序完成是：%@", arr);
+    [sort threeFlagsSortSwift];
     
     // 先序遍历
 //    [biTool preOrderTraverse:rootNode];
