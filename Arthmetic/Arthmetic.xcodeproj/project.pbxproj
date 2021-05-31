@@ -14,6 +14,9 @@
 		0E8811F6229309DD00AFCB53 /* ArthmeticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8811F5229309DD00AFCB53 /* ArthmeticTests.m */; };
 		0E881201229309DD00AFCB53 /* ArthmeticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E881200229309DD00AFCB53 /* ArthmeticUITests.m */; };
 		0E88121022930A0600AFCB53 /* SortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88120F22930A0600AFCB53 /* SortTool.m */; };
+		3F8204052665192600596797 /* DMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8204042665192600596797 /* DMAlertController.swift */; };
+		3F82040B2665197900596797 /* MMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8204092665197900596797 /* MMAlertController.m */; };
+		3F8204112665198200596797 /* MMAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8204102665198200596797 /* MMAlertAction.m */; };
 		3FB73101262E7228006514E8 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB73100262E7228006514E8 /* Sort.swift */; };
 		C301EEBA232F29E100229AFC /* CLQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEB9232F29E100229AFC /* CLQueue.m */; };
 		C301EEBD232F5A0C00229AFC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C301EEBC232F5A0C00229AFC /* Person.m */; };
@@ -54,6 +57,11 @@
 		0E881202229309DD00AFCB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E88120E22930A0600AFCB53 /* SortTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortTool.h; sourceTree = "<group>"; };
 		0E88120F22930A0600AFCB53 /* SortTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTool.m; sourceTree = "<group>"; };
+		3F8204042665192600596797 /* DMAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAlertController.swift; sourceTree = "<group>"; };
+		3F8204092665197900596797 /* MMAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAlertController.m; sourceTree = "<group>"; };
+		3F82040A2665197900596797 /* MMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAlertController.h; sourceTree = "<group>"; };
+		3F82040F2665198200596797 /* MMAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAlertAction.h; sourceTree = "<group>"; };
+		3F8204102665198200596797 /* MMAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAlertAction.m; sourceTree = "<group>"; };
 		3FB730FF262E7227006514E8 /* Arthmetic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arthmetic-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FB73100262E7228006514E8 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		C301EEB8232F29E100229AFC /* CLQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLQueue.h; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 		0E8811DB229309DB00AFCB53 /* Arthmetic */ = {
 			isa = PBXGroup;
 			children = (
+				3F8204032665191900596797 /* Test */,
 				402950A926526B5F0069F670 /* Sort */,
 				C301EEC3232FA9B100229AFC /* BinaryTreeTool */,
 				0E8811DC229309DB00AFCB53 /* AppDelegate.h */,
@@ -147,6 +156,18 @@
 				0E881202229309DD00AFCB53 /* Info.plist */,
 			);
 			path = ArthmeticUITests;
+			sourceTree = "<group>";
+		};
+		3F8204032665191900596797 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				3F82040F2665198200596797 /* MMAlertAction.h */,
+				3F8204102665198200596797 /* MMAlertAction.m */,
+				3F82040A2665197900596797 /* MMAlertController.h */,
+				3F8204092665197900596797 /* MMAlertController.m */,
+				3F8204042665192600596797 /* DMAlertController.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		402950A926526B5F0069F670 /* Sort */ = {
@@ -302,12 +323,15 @@
 			files = (
 				C301EEC9232FA9DA00229AFC /* BinaryTreeTool.m in Sources */,
 				C301EEBA232F29E100229AFC /* CLQueue.m in Sources */,
+				3F82040B2665197900596797 /* MMAlertController.m in Sources */,
 				0E8811EC229309DD00AFCB53 /* main.m in Sources */,
+				3F8204112665198200596797 /* MMAlertAction.m in Sources */,
 				C301EEBD232F5A0C00229AFC /* Person.m in Sources */,
 				0E8811DE229309DB00AFCB53 /* AppDelegate.m in Sources */,
 				3FB73101262E7228006514E8 /* Sort.swift in Sources */,
 				C301EEC6232FA9B100229AFC /* BinaryTreeNode.m in Sources */,
 				0E88121022930A0600AFCB53 /* SortTool.m in Sources */,
+				3F8204052665192600596797 /* DMAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
