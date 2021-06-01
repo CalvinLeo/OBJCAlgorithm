@@ -17,7 +17,13 @@ import UIKit
     
     /// 三色旗排序 swift 版本
     @objc func threeFlagsSortSwift() {
-        var array = [1, 0, 0, 1, 2, 0, 2, 2, 0, 1, 0]
+        var array = [2, 7, 11, 15]
+//        var array = [1, 0, 0, 1, 2, 0, 2, 2, 0, 1, 0]
+        var dict = Dictionary<Int, Int>()
+        for (index, num) in array.enumerated() {
+            dict[index] = num
+        }
+        
         threeFlagsSort(array: &array, left: 0, right: array.count - 1, pivot: 0)
         print("排序后的数组为：\(array)")
     }
