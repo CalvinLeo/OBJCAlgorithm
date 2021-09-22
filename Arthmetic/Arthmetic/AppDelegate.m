@@ -92,6 +92,11 @@
 //        NSLog(@"层次遍历：%@", number);
 //    }
     
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.backgroundColor = UIColor.whiteColor;
+    self.window.rootViewController = [[CustomViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -101,7 +106,6 @@
     obj2 = obj3;
     NSLog(@"deleteObject-------obj1:%p----------obj2:%p", &obj1, &obj2);
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
